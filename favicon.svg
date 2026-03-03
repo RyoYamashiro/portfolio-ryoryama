@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- ベージュ背景 -->
+  <rect width="32" height="32" rx="6" fill="#F7F5F2"/>
+  <!-- ネイビーの丸 -->
+  <circle cx="16" cy="16" r="13" fill="none" stroke="#1E2E52" stroke-width="1.5"/>
+  <!-- ネイビー「山」 -->
+  <text
+    x="16"
+    y="22.5"
+    font-family="'Hiragino Mincho ProN', 'Yu Mincho', 'MS Mincho', serif"
+    font-size="17"
+    font-weight="600"
+    fill="#1E2E52"
+    text-anchor="middle"
+  >山</text>
+</svg>
