@@ -633,6 +633,139 @@
       </div>
     </div>
 
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+         LuckyBeat ケーススタディ
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <div class="bg-white rounded-3xl shadow-sm overflow-hidden mt-8">
+
+      <!-- ヘッダー -->
+      <div class="bg-slate-800 px-10 py-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="text-[10px] px-2.5 py-1 bg-white/10 text-white/70 rounded-full">Laravel</span>
+            <span class="text-[10px] px-2.5 py-1 bg-white/10 text-white/70 rounded-full">JavaScript</span>
+            <span class="text-[10px] px-2.5 py-1 bg-white/10 text-white/70 rounded-full">AWS Lightsail</span>
+            <span class="text-[10px] px-2.5 py-1 bg-white/10 text-white/70 rounded-full">Stripe</span>
+            <span class="text-[10px] px-2.5 py-1 bg-white/10 text-white/70 rounded-full">自社開発</span>
+          </div>
+          <h4 class="text-white text-xl font-semibold">LuckyBeat</h4>
+          <p class="text-white/50 text-sm mt-1">日本語CtoCビート売買プラットフォーム｜自社開発・運営</p>
+        </div>
+        <a href="https://luckybeat.net/welcome" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 px-5 py-2.5 border border-white/30 rounded-lg text-white/80 text-sm hover:bg-white/10 transition whitespace-nowrap">
+          サイトを見る
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+
+      <div class="px-6 md:px-10 py-12">
+
+        <!-- スクリーンショット：welcome + ビート一覧 横並び -->
+        <div class="flex flex-col md:flex-row gap-4 mb-14">
+          <!-- welcomeページ -->
+          <div class="flex-1 bg-slate-100 rounded-xl overflow-hidden shadow-md flex flex-col">
+            <div class="bg-slate-200 px-4 py-2 flex items-center gap-2 flex-shrink-0">
+              <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+              </div>
+              <div class="flex-1 bg-white rounded text-[9px] text-slate-400 px-3 py-0.5 mono">luckybeat.net/welcome</div>
+            </div>
+            <!-- ↓ welcomeスクショ画像に差し替え: <img src="screenshots/luckybeat-welcome.png" class="w-full h-full object-cover object-top"> -->
+            <div class="w-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center" style="min-height:200px;">
+              <p class="text-slate-400 text-xs mono">welcome screenshot</p>
+            </div>
+          </div>
+          <!-- ビート一覧 -->
+          <div class="flex-1 bg-slate-100 rounded-xl overflow-hidden shadow-md flex flex-col">
+            <div class="bg-slate-200 px-4 py-2 flex items-center gap-2 flex-shrink-0">
+              <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+              </div>
+              <div class="flex-1 bg-white rounded text-[9px] text-slate-400 px-3 py-0.5 mono">luckybeat.net</div>
+            </div>
+            <!-- ↓ ビート一覧スクショ画像に差し替え: <img src="screenshots/luckybeat-top.png" class="w-full h-full object-cover object-top"> -->
+            <div class="w-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center" style="min-height:200px;">
+              <p class="text-slate-400 text-xs mono">top screenshot</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 概要 -->
+        <p class="text-sm text-slate-500 leading-loose mb-12 max-w-2xl">
+          日本語に特化したCtoCのビート売買プラットフォームを、要件定義・デザイン・DB設計・実装・テスト・リリースまで一人で担当。
+          Stripe決済を導入し、クリエイターへの売上還元率80%を実現。
+          ブラウザ上でのビート試聴・リピート再生・かんたん購入ダウンロードなど、使いやすさを重視したUX設計。
+          今後はSNSを中心としたマーケティングと、他サービスにはない独自機能の追加を継続的に進めていく予定。
+        </p>
+
+        <!-- 担当範囲 -->
+        <div>
+          <p class="text-[10px] tracking-[0.25em] text-slate-400 uppercase mb-6 mono">Responsibilities</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <div class="relative bg-[#F7F5F2] rounded-2xl p-6">
+              <span class="mono text-[10px] text-slate-300 absolute top-4 right-5">01</span>
+              <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </div>
+              <h5 class="text-sm font-semibold mb-2 text-slate-700">要件定義・設計</h5>
+              <p class="text-xs text-slate-500 leading-relaxed">ユーザーストーリーの整理からDB設計・画面設計まで全て担当。</p>
+            </div>
+
+            <div class="relative bg-[#F7F5F2] rounded-2xl p-6">
+              <span class="mono text-[10px] text-slate-300 absolute top-4 right-5">02</span>
+              <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5.5" height="5.5" rx="1" stroke="white" stroke-width="1.3"/><rect x="8.5" y="2" width="5.5" height="5.5" rx="1" stroke="white" stroke-width="1.3"/><rect x="2" y="8.5" width="5.5" height="5.5" rx="1" stroke="white" stroke-width="1.3"/><path d="M8.5 11.25h5M11 8.75v5" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </div>
+              <h5 class="text-sm font-semibold mb-2 text-slate-700">フロント・バック実装</h5>
+              <p class="text-xs text-slate-500 leading-relaxed">Laravel + JavaScript でフロントからサーバーサイドまで一気通貫で実装。</p>
+            </div>
+
+            <div class="relative bg-[#F7F5F2] rounded-2xl p-6">
+              <span class="mono text-[10px] text-slate-300 absolute top-4 right-5">03</span>
+              <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6z" stroke="white" stroke-width="1.3"/><path d="M8 5v3l2 2" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </div>
+              <h5 class="text-sm font-semibold mb-2 text-slate-700">Stripe決済導入</h5>
+              <p class="text-xs text-slate-500 leading-relaxed">クレジットカード決済・購入後即ダウンロードの仕組みをStripeで実装。</p>
+            </div>
+
+            <div class="relative bg-[#F7F5F2] rounded-2xl p-6">
+              <span class="mono text-[10px] text-slate-300 absolute top-4 right-5">04</span>
+              <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="white" stroke-width="1.3"/><path d="M5 8h6M8 5v6" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </div>
+              <h5 class="text-sm font-semibold mb-2 text-slate-700">AWSインフラ構築</h5>
+              <p class="text-xs text-slate-500 leading-relaxed">AWS Lightsailでサーバー構築・ドメイン設定・SSL対応まで対応。</p>
+            </div>
+
+            <div class="relative bg-[#F7F5F2] rounded-2xl p-6">
+              <span class="mono text-[10px] text-slate-300 absolute top-4 right-5">05</span>
+              <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h5 class="text-sm font-semibold mb-2 text-slate-700">テスト・リリース</h5>
+              <p class="text-xs text-slate-500 leading-relaxed">機能テスト・本番環境への移行・リリース後の運用保守まで継続対応中。</p>
+            </div>
+
+            <div class="relative bg-[#F7F5F2] rounded-2xl p-6">
+              <span class="mono text-[10px] text-slate-300 absolute top-4 right-5">06</span>
+              <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2C5 2 2 4 2 7c0 2 1.5 3.5 3 4.5V13h6v-1.5C12.5 10.5 14 9 14 7c0-3-3-5-6-5z" stroke="white" stroke-width="1.3"/><path d="M6 13v1h4v-1" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+              </div>
+              <h5 class="text-sm font-semibold mb-2 text-slate-700">継続的な機能開発</h5>
+              <p class="text-xs text-slate-500 leading-relaxed">UX/UI改善・独自機能追加・SNSマーケティングを継続的に展開予定。</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
