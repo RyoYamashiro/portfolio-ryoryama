@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>3万円ホームページ制作 | Ryo Yamashiro</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    .mono { font-family: 'Courier New', monospace; }
+
+    /* ── フェードアップ ── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      opacity: 0;
+      animation: fade-up 0.8s cubic-bezier(0.22,1,0.36,1) forwards;
+    }
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.25s; }
+    .fade-up-3 { animation-delay: 0.4s; }
+    .fade-up-4 { animation-delay: 0.55s; }
+
+    /* ── スクロールアニメーション ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ── グレイン ── */
+    .grain {
+      position: fixed; inset: 0; pointer-events: none; opacity: 0.025; z-index: 999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
+    }
+
+    /* ── 価格数字 ── */
+    @keyframes count-up {
+      from { opacity: 0; transform: scale(0.85) translateY(10px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .price-num {
+      animation: count-up 1s cubic-bezier(0.22,1,0.36,1) 0.3s both;
+    }
+
+    /* ── FAB ── */
+    .bar { transition: transform 0.3s ease, opacity 0.3s ease; transform-origin: center; }
+    .hamburger.open .bar-top    { transform: translateY(6px) rotate(45deg); }
+    .hamburger.open .bar-mid    { opacity: 0; transform: scaleX(0); }
+    .hamburger.open .bar-bottom { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── セクション区切り装飾 ── */
+    .section-label {
+      font-family: 'Courier New', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+
+    /* ── チェックリスト ── */
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .check-item:last-child { border-bottom: none; }
+
+    /* ── ステップ矢印 ── */
+    .step-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #cbd5e1;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body class="bg-[#F7F5F2] text-slate-800">
+
+<div class="grain"></div>
+
+<!-- ヘッダー -->
+<header class="fixed w-full top-0 left-0 bg-[#F7F5F2]/85 backdrop-blur z-50 border-b border-slate-200/50">
+  <div class="max-w-5xl mx-auto flex justify-between items-center px-6 py-4">
+    <a href="index.html" class="font-semibold text-sm tracking-wide text-slate-600 hover:text-slate-900 transition flex items-center gap-2">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7l6 6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Ryo Yamashiro
+    </a>
+    <a href="#contact"
+      class="text-xs px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition tracking-wide">
+      お問い合わせ
+    </a>
+  </div>
+</header>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ファーストビュー
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="relative min-h-screen flex items-center bg-[#F7F5F2] overflow-hidden pt-16">
+
+  <!-- 右側装飾：軌道SVG（ポートフォリオ踏襲・小さめ） -->
+  <div class="absolute inset-0 pointer-events-none select-none">
+    <svg
+      class="absolute"
+      style="top:50%; right:-180px; transform:translateY(-50%); width:560px; height:560px; opacity:0.55;"
+      viewBox="0 0 620 620" fill="none" xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="rgba(60,88,155,0.22)"/>
+          <stop offset="100%" stop-color="rgba(60,88,155,0)"/>
+        </radialGradient>
+        <radialGradient id="accentGlow1" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="rgba(28,44,90,0.18)"/>
+          <stop offset="100%" stop-color="rgba(28,44,90,0)"/>
+        </radialGradient>
+        <radialGradient id="accentGlow2" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="rgba(195,186,172,0.22)"/>
+          <stop offset="100%" stop-color="rgba(195,186,172,0)"/>
+        </radialGradient>
+      </defs>
+      <circle cx="310" cy="310" r="300" stroke="rgba(180,172,160,0.12)" stroke-width="0.6"/>
+      <circle cx="310" cy="310" r="258" stroke="rgba(140,155,185,0.18)" stroke-width="0.7" stroke-dasharray="18 10"/>
+      <circle cx="310" cy="310" r="195" stroke="rgba(88,112,162,0.18)" stroke-width="0.7" stroke-dasharray="6 14"/>
+      <circle cx="310" cy="310" r="140" stroke="rgba(42,62,112,0.20)" stroke-width="0.6"/>
+      <circle cx="310" cy="310" r="76"  stroke="rgba(28,44,85,0.20)"  stroke-width="0.6"/>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 310 310" to="360 310 310" dur="60s" repeatCount="indefinite"/>
+        <circle cx="310" cy="80" r="14" fill="rgba(24,40,82,0.75)"/>
+        <circle cx="306" cy="76" r="4"  fill="rgba(255,255,255,0.13)"/>
+        <circle cx="310" cy="80" r="28" fill="url(#accentGlow1)"/>
+      </g>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="210 310 310" to="-150 310 310" dur="80s" repeatCount="indefinite"/>
+        <circle cx="310" cy="40" r="19" fill="rgba(185,175,160,0.65)"/>
+        <circle cx="305" cy="36" r="5.5" fill="rgba(255,255,255,0.20)"/>
+        <circle cx="310" cy="40" r="38" fill="url(#accentGlow2)"/>
+      </g>
+      <circle cx="310" cy="310" r="14" fill="url(#coreGlow)"/>
+      <circle cx="310" cy="310" r="3.5" fill="rgba(30,48,92,0.55)"/>
+      <line x1="310" y1="290" x2="310" y2="302" stroke="rgba(30,48,92,0.22)" stroke-width="0.8"/>
+      <line x1="310" y1="318" x2="310" y2="330" stroke="rgba(30,48,92,0.22)" stroke-width="0.8"/>
+      <line x1="290" y1="310" x2="302" y2="310" stroke="rgba(30,48,92,0.22)" stroke-width="0.8"/>
+      <line x1="318" y1="310" x2="330" y2="310" stroke="rgba(30,48,92,0.22)" stroke-width="0.8"/>
+    </svg>
+  </div>
+
+  <!-- 右下コーナーメモ -->
+  <div class="absolute bottom-10 right-10 text-right pointer-events-none select-none hidden md:block">
+    <p class="mono text-[9px] text-slate-300 leading-5">
+      // SIMPLE HOMEPAGE PLAN<br/>
+      // ¥30,000
+    </p>
+  </div>
+
+  <div class="relative z-10 max-w-5xl mx-auto w-full px-6 py-24 md:py-0">
+    <div class="max-w-lg">
+      <p class="section-label mb-6 fade-up fade-up-1">Simple Homepage Plan</p>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug mb-6 text-slate-800 fade-up fade-up-2">
+        シンプルで見やすい<br />
+        ホームページを<br />
+        <span class="relative inline-block">
+          <span class="relative z-10">3万円</span>
+          <span class="absolute bottom-1 left-0 w-full h-3 bg-slate-200/70 -z-0 rounded"></span>
+        </span>で作成します。
+      </h1>
+      <p class="text-sm md:text-base text-slate-500 leading-loose mb-10 fade-up fade-up-3">
+        名刺代わりのサイトや、<br class="hidden sm:block"/>
+        とりあえず公開したい方におすすめです。
+      </p>
+      <div class="fade-up fade-up-4">
+        <a href="#contact"
+          class="inline-block px-8 py-3.5 bg-slate-800 text-white rounded-lg text-sm hover:bg-slate-700 transition duration-300 tracking-wide">
+          お気軽にご相談ください
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ホームページを作るメリット
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="reveal mb-14">
+      <p class="section-label mb-3">Merit</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-800 leading-snug">
+        ホームページがあると、<br/>何が変わるのか。
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="reveal reveal-delay-1 bg-[#F7F5F2] rounded-2xl p-7">
+        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-5">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2C4.68 2 2 4.68 2 8s2.68 6 6 6 6-2.68 6-6-2.68-6-6-6z" stroke="white" stroke-width="1.3"/><path d="M8 5v3l2 2" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-slate-700 mb-3">「ちゃんとしてる感」が伝わる</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">ホームページがあるだけで、サービスや活動への信頼感が高まります。名刺やSNSと組み合わせると、さらに効果的です。</p>
+      </div>
+      <div class="reveal reveal-delay-2 bg-[#F7F5F2] rounded-2xl p-7">
+        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-5">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="white" stroke-width="1.3"/><path d="M5 8h6M8 5v6" stroke="white" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-slate-700 mb-3">情報を1つにまとめられる</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">サービス内容・料金・連絡先を1ページにまとめることで、見てくれた人が迷わずに情報にたどり着けます。</p>
+      </div>
+      <div class="reveal reveal-delay-3 bg-[#F7F5F2] rounded-2xl p-7">
+        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-5">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M10 4l4 4-4 4" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-slate-700 mb-3">URLを送るだけで伝わる</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">自分の活動やサービスを説明するとき、URLを共有するだけで完結します。毎回文章を書く手間がなくなります。</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-8 bg-slate-50 border border-slate-200 rounded-2xl px-7 py-5">
+      <p class="text-sm text-slate-500 leading-loose">
+        とりあえず持っておくだけでも、印象はけっこう変わります。<br/>
+        「まだ早いかな」と思っているくらいのタイミングが、ちょうどいいことも多いです。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   こんな使い方ができます
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="py-24 bg-[#F7F5F2]">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="reveal mb-14">
+      <p class="section-label mb-3">Use Cases</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-800 leading-snug">
+        こんな使い方ができます。
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 max-w-3xl">
+      <div class="reveal reveal-delay-1 bg-white rounded-2xl p-6 border border-slate-100">
+        <div class="flex items-start gap-4">
+          <span class="mono text-[10px] text-slate-300 mt-0.5 flex-shrink-0">01</span>
+          <div>
+            <h3 class="text-sm font-semibold text-slate-700 mb-2">活動・サービスをまとめて伝える</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">自分がどんなことをしているのか、どんな依頼を受けているのかを1つのページにまとめて伝えられます。</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2 bg-white rounded-2xl p-6 border border-slate-100">
+        <div class="flex items-start gap-4">
+          <span class="mono text-[10px] text-slate-300 mt-0.5 flex-shrink-0">02</span>
+          <div>
+            <h3 class="text-sm font-semibold text-slate-700 mb-2">説明の手間をなくす</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">説明のたびに文章を打たなくても、URLを共有するだけでOKになります。</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1 bg-white rounded-2xl p-6 border border-slate-100">
+        <div class="flex items-start gap-4">
+          <span class="mono text-[10px] text-slate-300 mt-0.5 flex-shrink-0">03</span>
+          <div>
+            <h3 class="text-sm font-semibold text-slate-700 mb-2">依頼の窓口を1つにまとめる</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">お問い合わせフォームを設置すれば、依頼の窓口も1つにまとめられます。やり取りも整理しやすくなります。</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2 bg-white rounded-2xl p-6 border border-slate-100">
+        <div class="flex items-start gap-4">
+          <span class="mono text-[10px] text-slate-300 mt-0.5 flex-shrink-0">04</span>
+          <div>
+            <h3 class="text-sm font-semibold text-slate-700 mb-2">名刺・SNSと組み合わせる</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">名刺にURLを載せたり、SNSのプロフィールにリンクを貼ることで、活動の信頼感をさらに高められます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   サービス内容 + こんな方に
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- サービス内容 -->
+      <div class="reveal">
+        <p class="section-label mb-3">Included</p>
+        <h2 class="text-2xl font-semibold text-slate-800 mb-8">サービス内容</h2>
+        <div class="space-y-0">
+          <div class="check-item">
+            <div class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="text-sm text-slate-700">シンプルなデザイン</p>
+          </div>
+          <div class="check-item">
+            <div class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="text-sm text-slate-700">スマホ対応（レスポンシブ）</p>
+          </div>
+          <div class="check-item">
+            <div class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="text-sm text-slate-700">お問い合わせ導線あり</p>
+          </div>
+          <div class="check-item">
+            <div class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="text-sm text-slate-700">無料で公開可能（Vercel利用）</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- こんな方に -->
+      <div class="reveal reveal-delay-2">
+        <p class="section-label mb-3">For</p>
+        <h2 class="text-2xl font-semibold text-slate-800 mb-8">こんな方におすすめ</h2>
+        <div class="space-y-0">
+          <div class="check-item">
+            <div class="w-5 h-5 rounded-full border border-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
+            </div>
+            <p class="text-sm text-slate-700">とりあえずホームページを持ちたい</p>
+          </div>
+          <div class="check-item">
+            <div class="w-5 h-5 rounded-full border border-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
+            </div>
+            <p class="text-sm text-slate-700">できるだけ費用を抑えたい</p>
+          </div>
+          <div class="check-item">
+            <div class="w-5 h-5 rounded-full border border-slate-300 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-1.5 h-1.5 rounded-full bg-slate-400"></div>
+            </div>
+            <p class="text-sm text-slate-700">シンプルなサイトで十分</p>
+          </div>
+        </div>
+        <div class="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-200">
+          <p class="text-xs text-slate-400 leading-relaxed">
+            ※ 本格的な集客やSEO対策を目的とした方には向いていません。<br/>
+            その場合は別途ご相談ください。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   料金
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="py-24 bg-slate-900">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+
+    <div class="reveal">
+      <p class="section-label mb-3" style="color: rgba(148,163,184,0.7);">Price</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-14">料金</h2>
+    </div>
+
+    <!-- 価格カード -->
+    <div class="reveal max-w-sm mx-auto bg-white rounded-3xl p-10 mb-10">
+      <p class="text-xs text-slate-400 tracking-widest mono mb-4">SIMPLE PLAN</p>
+      <div class="price-num flex items-baseline justify-center gap-1 mb-2">
+        <span class="text-5xl md:text-6xl font-bold text-slate-800 tracking-tight">30,000</span>
+        <span class="text-xl text-slate-500 font-medium">円</span>
+      </div>
+      <p class="text-xs text-slate-400 mb-8">買い切り</p>
+      <div class="space-y-2 text-left mb-8">
+        <div class="flex items-center gap-2 text-xs text-slate-500">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6l3.5 3.5 6.5-6.5" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          シンプルなデザイン・スマホ対応
+        </div>
+        <div class="flex items-center gap-2 text-xs text-slate-500">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6l3.5 3.5 6.5-6.5" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          お問い合わせフォーム設置
+        </div>
+        <div class="flex items-center gap-2 text-xs text-slate-500">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 6l3.5 3.5 6.5-6.5" stroke="#94a3b8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          無料で公開可能（Vercel）
+        </div>
+      </div>
+      <a href="#contact"
+        class="block w-full py-3.5 bg-slate-800 text-white text-sm rounded-xl hover:bg-slate-700 transition tracking-wide text-center">
+        相談してみる
+      </a>
+    </div>
+
+    <!-- 注記 -->
+    <div class="reveal grid md:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
+      <div class="bg-slate-800 rounded-2xl p-5">
+        <p class="text-xs text-slate-400 leading-relaxed">
+          ドメイン取得は希望者のみ対応します。<br/>（年間1,500〜6,000円程度 / 種類によって異なります）
+        </p>
+      </div>
+      <div class="bg-slate-800 rounded-2xl p-5">
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Vercelを使用するため、サーバー代は無料で運用可能です。
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   価格を抑えられる理由
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="py-24 bg-[#F7F5F2]">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="reveal mb-12">
+      <p class="section-label mb-3">Why So Affordable</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-800">価格を抑えられる理由</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="reveal reveal-delay-1 bg-white rounded-2xl p-7 border border-slate-100">
+        <p class="mono text-[10px] text-slate-300 mb-4">01</p>
+        <h3 class="text-sm font-semibold text-slate-700 mb-3">シンプルな構成に絞っている</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">余分な機能を省いたシンプルな構成にすることで、工数を最小限に抑えています。</p>
+      </div>
+      <div class="reveal reveal-delay-2 bg-white rounded-2xl p-7 border border-slate-100">
+        <p class="mono text-[10px] text-slate-300 mb-4">02</p>
+        <h3 class="text-sm font-semibold text-slate-700 mb-3">効率的な制作フロー</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">確立した制作フローにより、スピーディーかつムダのない対応が可能です。</p>
+      </div>
+      <div class="reveal reveal-delay-3 bg-white rounded-2xl p-7 border border-slate-100">
+        <p class="mono text-[10px] text-slate-300 mb-4">03</p>
+        <h3 class="text-sm font-semibold text-slate-700 mb-3">実績を増やすための価格設定</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">現在は実績を増やすため、通常より低価格でご提供しています。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   納期・制作の流れ
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="grid md:grid-cols-2 gap-16">
+
+      <!-- 納期 -->
+      <div class="reveal">
+        <p class="section-label mb-3">Timeline</p>
+        <h2 class="text-2xl font-semibold text-slate-800 mb-6">納期・進め方</h2>
+        <p class="text-sm text-slate-500 leading-loose mb-4">
+          ヒアリング内容確定後、<strong class="text-slate-700">最短2週間で公開</strong>が可能です。
+        </p>
+        <p class="text-sm text-slate-500 leading-loose">
+          制作中も進捗を共有するので、<strong class="text-slate-700">「思ってたのと違う…」というズレを減らしながら</strong>進められます。
+        </p>
+      </div>
+
+      <!-- 制作の流れ -->
+      <div class="reveal reveal-delay-2">
+        <p class="section-label mb-3">Process</p>
+        <h2 class="text-2xl font-semibold text-slate-800 mb-8">制作の流れ</h2>
+        <div class="flex items-center gap-0">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs font-semibold mb-2">01</div>
+            <p class="text-[10px] text-slate-500 mono text-center">ヒアリング</p>
+          </div>
+          <div class="flex-1 h-px bg-slate-200 mb-5 mx-2"></div>
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs font-semibold mb-2">02</div>
+            <p class="text-[10px] text-slate-500 mono text-center">デザイン</p>
+          </div>
+          <div class="flex-1 h-px bg-slate-200 mb-5 mx-2"></div>
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs font-semibold mb-2">03</div>
+            <p class="text-[10px] text-slate-500 mono text-center">修正</p>
+          </div>
+          <div class="flex-1 h-px bg-slate-200 mb-5 mx-2"></div>
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs font-semibold mb-2">04</div>
+            <p class="text-[10px] text-slate-500 mono text-center">公開</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━
+   お問い合わせ
+━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="contact" class="py-24 bg-[#F7F5F2]">
+  <div class="max-w-2xl mx-auto px-6">
+
+    <div class="reveal text-center mb-12">
+      <p class="section-label mb-3">Contact</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-800 mb-3">まずはお気軽にご相談ください</h2>
+      <p class="text-sm text-slate-500 leading-loose">
+        「作るか迷っている」段階でも大丈夫です。<br/>
+        無理に進めることはありません。
+      </p>
+    </div>
+
+    <div class="reveal bg-white rounded-3xl p-8 md:p-10 border border-slate-100">
+      <form action="https://formspree.io/f/xgolqadb" method="POST" class="space-y-5">
+        <input type="hidden" name="_subject" value="【3万円プラン】お問い合わせが届きました" />
+        <div>
+          <label class="block text-xs text-slate-500 mb-1.5">お名前 <span class="text-red-400">*</span></label>
+          <input type="text" name="name" required placeholder="山田 太郎"
+            class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-300 transition bg-[#F7F5F2]" />
+        </div>
+        <div>
+          <label class="block text-xs text-slate-500 mb-1.5">メールアドレス <span class="text-red-400">*</span></label>
+          <input type="email" name="email" required placeholder="example@email.com"
+            class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-300 transition bg-[#F7F5F2]" />
+        </div>
+        <div>
+          <label class="block text-xs text-slate-500 mb-1.5">ご相談内容 <span class="text-red-400">*</span></label>
+          <textarea name="message" required rows="5"
+            placeholder="「まだ何も決まっていない」という段階でも大丈夫です。お気軽にどうぞ。"
+            class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-300 transition resize-none bg-[#F7F5F2]"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-slate-800 text-white py-3.5 rounded-xl hover:bg-slate-700 transition text-sm tracking-wide">
+          送信する
+        </button>
+        <p class="text-center text-xs text-slate-400">送信後、確認メールは届きません。返信までしばらくお待ちください。</p>
+      </form>
+    </div>
+
+    <!-- ポートフォリオへ -->
+    <div class="reveal mt-8 text-center">
+      <p class="text-xs text-slate-400 mb-3">制作実績も見ていただけます</p>
+      <a href="index.html"
+        class="inline-flex items-center gap-2 text-sm text-slate-600 border border-slate-300 px-5 py-2.5 rounded-lg hover:border-slate-500 hover:text-slate-800 transition">
+        ポートフォリオを見る
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="bg-slate-900 text-slate-500 py-8">
+  <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3">
+    <span class="text-white font-semibold tracking-wide text-sm">Ryo Yamashiro</span>
+    <p class="mono text-xs tracking-widest">© 2025 Ryo Yamashiro. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // スクロールアニメーション
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
