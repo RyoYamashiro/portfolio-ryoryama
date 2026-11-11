@@ -1,0 +1,66 @@
+/* 料金プランページ専用スタイル（共通スタイルは style.css） */
+
+/* ── フェードアップ ── */
+:root { --fade-up-distance: 20px; }
+.fade-up {
+  opacity: 0;
+  animation: fade-up 0.8s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+.fade-up-1 { animation-delay: 0.1s; }
+.fade-up-2 { animation-delay: 0.25s; }
+.fade-up-3 { animation-delay: 0.4s; }
+.fade-up-4 { animation-delay: 0.55s; }
+
+/* ── スクロールアニメーション ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* 共通のグレインに料金ページ専用の見た目を追加 */
+.grain { position: fixed; opacity: 0.025; z-index: 999; }
+
+/* ── 価格数字 ── */
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.85) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.price-num {
+  animation: count-up 1s cubic-bezier(0.22,1,0.36,1) 0.3s both;
+}
+
+/* ── セクション区切り装飾 ── */
+.section-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* ── チェックリスト ── */
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.check-item:last-child { border-bottom: none; }
+
+/* ── ステップ矢印 ── */
+.step-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  font-size: 1.2rem;
+}
