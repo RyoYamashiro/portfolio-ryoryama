@@ -1,0 +1,64 @@
+[
+  {
+    "id": "G01",
+    "preview": "pinterest-revive.jpg",
+    "label": "REVIVE / Pinterest",
+    "source": "https://www.pinterest.com/pin/website-homepage-design-for-fitness-gym--181551428719716645/",
+    "checked": "2026-11-12",
+    "purpose": "内部デザイン比較用。商品素材として再利用しない。",
+    "creator": "元作者未確認（Pinterest掲載画像）",
+    "verification": "画像目視済み。公開サイトの最新画面・モバイル動作は未検証。",
+    "page_status": "本文403。公開画像を確認。"
+  },
+  {
+    "id": "G02",
+    "preview": "fitpro.jpg",
+    "label": "FitPro / Dribbble",
+    "source": "https://dribbble.com/shots/27242443-Fitpro-Gym-Web-Experience-UI",
+    "checked": "2026-11-12",
+    "purpose": "内部デザイン比較用。商品素材として再利用しない。",
+    "creator": "Israel Udo UI/UX",
+    "verification": "画像目視済み。公開サイトの最新画面・モバイル動作は未検証。"
+  },
+  {
+    "id": "G03",
+    "preview": "vitamotion.jpg",
+    "label": "VitaMotion / Dribbble",
+    "source": "https://dribbble.com/shots/25998465-VitaMotion-Elite-Performance-Gym",
+    "checked": "2026-11-12",
+    "purpose": "内部デザイン比較用。商品素材として再利用しない。",
+    "creator": "Edin Agbabic",
+    "verification": "画像目視済み。公開サイトの最新画面・モバイル動作は未検証。"
+  },
+  {
+    "id": "G04",
+    "preview": "fitzen.jpg",
+    "label": "FITZEN / Behance",
+    "source": "https://www.behance.net/gallery/219908479/FITZEN-Gym-Website-UI-Design",
+    "checked": "2026-11-12",
+    "purpose": "内部デザイン比較用。商品素材として再利用しない。",
+    "creator": "Chhavi Soni",
+    "verification": "画像目視済み。公開サイトの最新画面・モバイル動作は未検証。"
+  },
+  {
+    "id": "G05",
+    "preview": "primal.jpg",
+    "label": "Primal / Luminary Studio",
+    "source": "https://www.luminarystudio.co/portfolio/sports-performance-gym",
+    "checked": "2026-11-12",
+    "purpose": "内部デザイン比較用。商品素材として再利用しない。",
+    "creator": "Luminary Studio / Shannon Casey",
+    "verification": "画像目視済み。公開サイトの最新画面・モバイル動作は未検証。"
+  },
+  {
+    "id": "G07",
+    "preview": "vermillion.jpg",
+    "label": "Vermillion / image only",
+    "source": "https://www.hemmadigital.com/portfolio/studiovermillion",
+    "checked": "2026-11-12",
+    "purpose": "内部デザイン比較用。商品素材として再利用しない。",
+    "creator": "Hemma Digitalとされる掲載画像（掲載ページ404）",
+    "verification": "画像目視済み。公開サイトの最新画面・モバイル動作は未検証。",
+    "page_status": "掲載ページ404。画像のみ確認。"
+  }
+]
