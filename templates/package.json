@@ -1,0 +1,25 @@
+{
+  "name": "headless-sample",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ヘッドレスCMSの流れを学ぶ、ローカル専用の最小サンプル",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "test": "npm run build && node --test",
+    "cms:check": "node scripts/check-microcms.mjs",
+    "cms:schema": "node scripts/create-microcms-schema.mjs",
+    "cms:check:gym": "node scripts/check-microcms.mjs --stella",
+    "cms:schema:gym": "node scripts/create-stella-schema.mjs"
+  },
+  "dependencies": {
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "hello-headless",
+    "title": "はじめてのヘッドレスCMS",
+    "body": "この記事はHTMLに直接書かれていません。\nCMSのAPIから取得したデータをJavaScriptで表示しています。\n管理画面でタイトルを変えて、一覧を再読み込みしてみましょう。",
+    "status": "published"
+  },
+  {
+    "id": "my-first-draft",
+    "title": "これは下書きです",
+    "body": "管理画面には表示されますが、公開APIには表示されません。\n公開に切り替えて違いを確認しましょう。",
+    "status": "draft"
+  }
+]

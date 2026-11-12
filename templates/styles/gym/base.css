@@ -1,0 +1,206 @@
+.gym-site {
+  --teal: #0799b1;
+  --teal-deep: #008ba4;
+  --theme-swatch: #0799b1;
+  --button-start: #008ea8;
+  --button-end: #08a1b6;
+  --button-text: #fff;
+  --theme-soft: color-mix(in srgb, var(--theme-swatch) 9%, white);
+  --theme-line: color-mix(in srgb, var(--theme-swatch) 20%, white);
+  --ink: #101b29;
+  --muted: #5a6570;
+  --line: #e8eced;
+  --white: #fff;
+  --cloud: #f8fafb;
+  --font:
+    "DM Sans", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    sans-serif;
+  --shadow: 0 8px 30px rgba(18, 34, 44, 0.055);
+  --radius: 11px;
+  --shell: 1160px;
+  --header-height: 67px;
+}
+
+:where(.gym-site) * {
+  box-sizing: border-box;
+}
+
+html:has(.gym-site) {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height, 67px) + 12px);
+}
+
+.gym-site {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+:where(.gym-site) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(.gym-site) button {
+  font: inherit;
+  cursor: pointer;
+}
+
+:where(.gym-site) img {
+  display: block;
+  max-width: 100%;
+}
+
+:where(.gym-site) svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+:where(.gym-site) .svg-sprite {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+:where(.gym-site) .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+:where(.gym-site) .page-shell {
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+:where(.gym-site) .section {
+  position: relative;
+}
+
+:where(.gym-site) .eyebrow {
+  display: block;
+  color: var(--teal);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+:where(.gym-site) .section-intro h2 {
+  font-size: 29px;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  line-height: 1.38;
+  margin: 0;
+}
+
+:where(.gym-site) .section-intro > p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin: 28px 0 36px;
+}
+
+:where(.gym-site) .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 100px;
+  padding: 13px 23px;
+  min-height: 48px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    background 0.25s,
+    color 0.25s,
+    border-color 0.25s;
+  white-space: nowrap;
+}
+
+:where(.gym-site) .btn:hover {
+  transform: translateY(-3px);
+}
+
+:where(.gym-site) .btn:focus-visible,
+:where(.gym-site) .circle-btn:focus-visible,
+:where(.gym-site) .floating-arrow:focus-visible,
+:where(.gym-site) .feature-thumb:focus-visible,
+:where(.gym-site) .trainer-tile:focus-visible,
+:where(.gym-site) .menu-toggle:focus-visible,
+:where(.gym-site) .round-arrow:focus-visible,
+:where(.gym-site) summary:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
+
+:where(.gym-site) .btn-primary {
+  border: 1px solid var(--teal);
+  background: linear-gradient(110deg, var(--button-start), var(--button-end));
+  color: var(--button-text);
+  box-shadow: 0 8px 17px
+    color-mix(in srgb, var(--theme-swatch) 13%, transparent);
+}
+
+:where(.gym-site) .btn-primary:hover {
+  background: linear-gradient(
+    110deg,
+    color-mix(in srgb, var(--button-start) 92%, black),
+    color-mix(in srgb, var(--button-end) 92%, black)
+  );
+  box-shadow: 0 11px 24px
+    color-mix(in srgb, var(--theme-swatch) 23%, transparent);
+}
+
+:where(.gym-site) .btn-outline {
+  border: 1.5px solid var(--teal);
+  color: var(--teal);
+  background: #fff;
+  padding-inline: 27px;
+}
+
+:where(.gym-site) .btn-outline:hover {
+  background: var(--theme-soft);
+}
+
+:where(.gym-site) .btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+:where(.gym-site) .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+:where(.gym-site) .text-link .icon {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.2s;
+}
+
+:where(.gym-site) .text-link:hover .icon,
+:where(.gym-site) .more-link:hover .icon {
+  transform: translateX(3px);
+}

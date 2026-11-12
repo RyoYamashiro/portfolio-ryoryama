@@ -1,0 +1,83 @@
+{
+  "name": "STELLA GYM",
+  "subtitle": "PERSONAL TRAINING",
+  "phone": "03-6459-1234",
+  "hours": "受付時間 9:00-21:00",
+  "title": "STELLA GYM | 理想のカラダで、もっと好きな自分に。",
+  "description": "STELLA GYMは、一人ひとりに寄り添う完全オーダーメイドのパーソナルジム。トレーニング・食事サポート・初めての方への丁寧な指導をご紹介します。",
+  "heroTitle": "理想のカラダで、\nもっと好きな自分に。",
+  "heroBody": "一人ひとりに寄り添う\n完全オーダーメイドのパーソナルジムです。",
+  "contactTitle": "まずは無料カウンセリングで、\nあなたの理想を一緒に考えませんか？",
+  "bookingUrl": "",
+  "courses": [
+    {
+      "title": "ボディメイクプラン",
+      "alt": "ボディメイクに取り組む女性",
+      "tags": "女性人気No.1\n引き締め・美姿勢",
+      "description": "理想のカラダをつくりたい方に。",
+      "price": 96000,
+      "fieldId": "courses"
+    },
+    {
+      "title": "ダイエットプラン",
+      "alt": "トレーニング中の身体のイメージ",
+      "tags": "短期集中\n体脂肪を落としたい",
+      "description": "健康的に、無理なく痩せたい方に。",
+      "price": 76000,
+      "fieldId": "courses"
+    },
+    {
+      "title": "健康・運動習慣プラン",
+      "alt": "ストレッチに取り組む男性",
+      "tags": "体力向上\n運動不足解消",
+      "description": "体力向上・継続的に運動したい方に。",
+      "price": 64000,
+      "fieldId": "courses"
+    }
+  ],
+  "trainers": [
+    {
+      "name": "山田 大輔",
+      "englishName": "DAISUKE YAMADA",
+      "qualification": "NSCA認定トレーナー\nダイエット・ボディメイク専門",
+      "description": "資格保有・指導経験豊富なトレーナーが、\n一人ひとりに寄り添い、理想のカラダづくりをサポートします。",
+      "fieldId": "trainers"
+    },
+    {
+      "name": "佐藤 美咲",
+      "englishName": "MISAKI SATO",
+      "qualification": "NESTA認定トレーナー",
+      "description": "佐藤美咲トレーナーが、\n健康的に続けられる運動習慣を一緒に考えます。",
+      "fieldId": "trainers"
+    },
+    {
+      "name": "高橋 健太",
+      "englishName": "KENTA TAKAHASHI",
+      "qualification": "運動習慣改善",
+      "description": "高橋健太トレーナーが、\n身体の状態に合わせた無理のない指導でサポートします。",
+      "fieldId": "trainers"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "運動初心者でも大丈夫ですか？",
+      "answer": "もちろん大丈夫です。一人ひとりの体力や運動経験に合わせ、無理のない内容から丁寧にご案内します。",
+      "fieldId": "faqs"
+    },
+    {
+      "question": "食事指導はどのように行われますか？",
+      "answer": "生活リズムや目標をヒアリングし、日常に取り入れやすい食事のアドバイスをご提案します。",
+      "fieldId": "faqs"
+    },
+    {
+      "question": "料金の支払い方法を教えてください。",
+      "answer": "お支払い方法はプランや店舗によって異なります。詳しくはカウンセリングの際にご案内します。",
+      "fieldId": "faqs"
+    },
+    {
+      "question": "トレーニングに必要な持ち物はありますか？",
+      "answer": "動きやすい服装と水分補給できるものをご用意ください。詳細はご予約時にご案内します。",
+      "fieldId": "faqs"
+    }
+  ]
+}

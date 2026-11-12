@@ -1,0 +1,742 @@
+/* responsive */
+
+@media (max-width: 1240px) {
+  :where(.gym-site) .page-shell {
+    padding-inline: 36px;
+  }
+  :where(.gym-site) .desktop-nav {
+    gap: 18px;
+    margin-left: 5px;
+  }
+  :where(.gym-site) .header-inner {
+    gap: 10px;
+  }
+  :where(.gym-site) .header-actions {
+    gap: 14px;
+  }
+  :where(.gym-site) .phone b {
+    font-size: 14px;
+  }
+  :where(.gym-site) .btn-header {
+    font-size: 11px;
+    padding-inline: 14px;
+  }
+  :where(.gym-site) .feature-layout {
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+  }
+  :where(.gym-site) .split-layout {
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+  }
+  :where(.gym-site) .course-card h3 {
+    font-size: 16px;
+  }
+  :where(.gym-site) .price-row b {
+    font-size: 23px;
+  }
+  :where(.gym-site) .trainer-details {
+    padding-right: 38px;
+  }
+  :where(.gym-site) .flow-layout {
+    grid-template-columns: 255px 1fr;
+  }
+  :where(.gym-site) .faq-layout,
+  :where(.gym-site) .blog-layout {
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 980px) {
+  .gym-site {
+    --header-height: 62px;
+  }
+  :where(.gym-site) .page-shell {
+    padding-inline: 27px;
+  }
+  :where(.gym-site) .desktop-nav,
+  :where(.gym-site) .phone {
+    display: none;
+  }
+  :where(.gym-site) .btn-header {
+    min-height: 40px;
+  }
+  :where(.gym-site) .feature-layout,
+  :where(.gym-site) .split-layout,
+  :where(.gym-site) .flow-layout,
+  :where(.gym-site) .voice-layout,
+  :where(.gym-site) .faq-layout,
+  :where(.gym-site) .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  :where(.gym-site) .section-intro h2 br {
+    display: none;
+  }
+  :where(.gym-site) .feature-nav {
+    margin-top: 20px;
+  }
+  :where(.gym-site) .features {
+    padding-block: 55px;
+  }
+  :where(.gym-site) .feature-highlight {
+    height: 260px;
+  }
+  :where(.gym-site) .courses {
+    padding-block: 40px;
+  }
+  :where(.gym-site) .trainer {
+    grid-template-columns: 42% 58%;
+  }
+  :where(.gym-site) .trainer-details {
+    padding: 40px 25px;
+  }
+  :where(.gym-site) .trainer-tiles {
+    gap: 8px;
+  }
+  :where(.gym-site) .trainer-tile.active {
+    flex-direction: column;
+    padding: 4px;
+  }
+  :where(.gym-site) .trainer-tile.active img {
+    width: 100%;
+    height: 85px;
+  }
+  :where(.gym-site) .tiny-arrow {
+    display: none;
+  }
+  :where(.gym-site) .flow-steps {
+    margin-top: 15px;
+  }
+  :where(.gym-site) .voice-layout {
+    gap: 10px;
+  }
+  :where(.gym-site) .faq-list .more-link,
+  :where(.gym-site) .blog-more {
+    position: static;
+    margin: 10px 0 0;
+  }
+  :where(.gym-site) .blog-more {
+    grid-column: 1/-1;
+    justify-self: end;
+  }
+  :where(.gym-site) .blog-section,
+  :where(.gym-site) .faq-section {
+    padding-block: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .gym-site {
+    --header-height: 60px;
+  }
+  :where(.gym-site) .page-shell {
+    padding-inline: 21px;
+  }
+  :where(.gym-site) .site-header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 12px #152b3612;
+  }
+  :where(.gym-site) .brand-main {
+    font-size: 18px;
+  }
+  :where(.gym-site) .brand-sub {
+    font-size: 7px;
+  }
+  :where(.gym-site) .btn-header {
+    display: none;
+  }
+  :where(.gym-site) .menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+  }
+  :where(.gym-site) .menu-toggle .icon {
+    width: 29px;
+    height: 29px;
+  }
+  :where(.gym-site) .mobile-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    box-shadow: 0 15px 30px #051c2626;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 21px 22px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.25s,
+      transform 0.25s,
+      visibility 0.25s;
+  }
+  :where(.gym-site) .mobile-nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  :where(.gym-site) .mobile-nav a {
+    padding: 13px 6px;
+    border-bottom: 1px solid #edf1f2;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  :where(.gym-site) .mobile-nav .mobile-nav-cta {
+    border: 0;
+    border-radius: 30px;
+    background: var(--teal);
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+  }
+  :where(.gym-site) .hero {
+    height: auto;
+    min-height: 705px;
+    background: #f6f8f7;
+    display: flex;
+    align-items: flex-end;
+  }
+  :where(.gym-site) .hero-photo {
+    mask-image: none;
+    -webkit-mask-image: none;
+    width: 100%;
+    height: 455px;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center 45%;
+    transform: none;
+    animation: none;
+  }
+  :where(.gym-site) .hero:after {
+    background: linear-gradient(
+      0deg,
+      #f6f8f7 4%,
+      rgba(246, 248, 247, 0.85) 33%,
+      transparent 64%
+    );
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 500px;
+  }
+  :where(.gym-site) .hero-content {
+    display: block;
+    min-height: 705px;
+    padding-top: 320px;
+    padding-bottom: 28px;
+  }
+  :where(.gym-site) .hero-copy {
+    width: 100%;
+    margin: 0;
+  }
+  :where(.gym-site) .hero h1 {
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.48;
+    margin-bottom: 13px;
+    letter-spacing: -0.065em;
+  }
+  :where(.gym-site) .hero-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 17px;
+  }
+  :where(.gym-site) .hero-description br:nth-of-type(2) {
+    display: none;
+  }
+  :where(.gym-site) .hero-benefits {
+    padding: 13px 10px;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 4px 20px #182e3810;
+    gap: 0;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+  :where(.gym-site) .hero-benefit {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+  :where(.gym-site) .hero-benefit + .hero-benefit {
+    border-left: 1px solid #e7ebed;
+  }
+  :where(.gym-site) .hero-benefit .icon {
+    width: 27px;
+    height: 27px;
+  }
+  :where(.gym-site) .hero-benefit span {
+    font-size: 9px;
+  }
+  :where(.gym-site) .hero-cta {
+    min-width: 0;
+    width: 100%;
+    min-height: 55px;
+    font-size: 13px;
+    gap: 12px;
+  }
+  :where(.gym-site) .cta-caption {
+    width: 100%;
+    font-size: 11px;
+  }
+  :where(.gym-site) .section-intro h2 {
+    font-size: 25px;
+  }
+  :where(.gym-site) .section-intro > p {
+    margin: 18px 0 28px;
+    font-size: 13px;
+  }
+  :where(.gym-site) .eyebrow {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+  :where(.gym-site) .feature-layout {
+    gap: 24px;
+  }
+  :where(.gym-site) .features {
+    padding: 56px 0;
+  }
+  :where(.gym-site) .features .section-intro h2 {
+    font-size: 26px;
+  }
+  :where(.gym-site) .feature-nav {
+    margin-top: 16px;
+  }
+  :where(.gym-site) .circle-btn {
+    width: 38px;
+    height: 38px;
+  }
+  :where(.gym-site) .feature-highlight {
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  :where(.gym-site) .feature-highlight > img {
+    height: 220px;
+    object-fit: cover;
+  }
+  :where(.gym-site) .feature-highlight-text {
+    padding: 20px 22px;
+  }
+  :where(.gym-site) .feature-highlight h3 {
+    font-size: 21px;
+  }
+  :where(.gym-site) .feature-highlight p {
+    font-size: 13px;
+  }
+  :where(.gym-site) .feature-highlight .text-link {
+    margin-top: 15px;
+  }
+  :where(.gym-site) .feature-thumbs {
+    gap: 7px;
+    margin-top: 12px;
+  }
+  :where(.gym-site) .feature-thumb {
+    height: 78px;
+  }
+  :where(.gym-site) .feature-thumb img {
+    height: 50px;
+  }
+  :where(.gym-site) .feature-thumb span {
+    font-size: 9px;
+    padding: 5px;
+  }
+  :where(.gym-site) .courses {
+    padding: 56px 0;
+  }
+  :where(.gym-site) .course-track {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    padding: 8px 1px 16px;
+    scroll-behavior: smooth;
+  }
+  :where(.gym-site) .course-track::-webkit-scrollbar {
+    display: none;
+  }
+  :where(.gym-site) .course-card {
+    min-width: 78%;
+    scroll-snap-align: start;
+  }
+  :where(.gym-site) .course-card > img {
+    height: 200px;
+  }
+  :where(.gym-site) .course-card h3 {
+    font-size: 19px;
+  }
+  :where(.gym-site) .course-card-body {
+    padding: 18px;
+  }
+  :where(.gym-site) .course-card p {
+    font-size: 13px;
+  }
+  :where(.gym-site) .course-card .price-row b {
+    font-size: 26px;
+  }
+  :where(.gym-site) .trainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  :where(.gym-site) .trainer-main-image {
+    height: 390px;
+  }
+  :where(.gym-site) .trainer-main-image img {
+    object-position: center 20%;
+  }
+  :where(.gym-site) .trainer-details {
+    padding: 32px 21px 45px;
+  }
+  :where(.gym-site) .trainer-details h2 {
+    font-size: 25px;
+  }
+  :where(.gym-site) .trainer-details > p {
+    font-size: 13px;
+  }
+  :where(.gym-site) .trainer-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+  }
+  :where(.gym-site) .trainer-tile,
+  :where(.gym-site) .trainer-tile.active {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 4px;
+  }
+  :where(.gym-site) .trainer-tile img,
+  :where(.gym-site) .trainer-tile.active img {
+    width: 100%;
+    height: 110px;
+  }
+  :where(.gym-site) .trainer-tile strong {
+    font-size: 12px;
+  }
+  :where(.gym-site) .trainer-tile small {
+    font-size: 8px;
+  }
+  :where(.gym-site) .trainer-tile em {
+    display: none;
+  }
+  :where(.gym-site) .flow-section {
+    padding: 56px 0;
+  }
+  :where(.gym-site) .flow-steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 26px;
+  }
+  :where(.gym-site) .flow-steps li > .icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 12px;
+  }
+  :where(.gym-site) .flow-number {
+    left: 13%;
+    top: 0;
+  }
+  :where(.gym-site) .flow-steps li:nth-child(2):after {
+    display: none;
+  }
+  :where(.gym-site) .flow-steps li:not(:last-child):after {
+    top: 20px;
+  }
+  :where(.gym-site) .flow-steps strong {
+    font-size: 12px;
+  }
+  :where(.gym-site) .flow-steps small {
+    font-size: 10px;
+    white-space: normal;
+  }
+  :where(.gym-site) .voices {
+    padding: 48px 0;
+  }
+  :where(.gym-site) .voice-track {
+    grid-auto-columns: 87%;
+  }
+  :where(.gym-site) .voice-card {
+    grid-template-columns: 38% 1fr;
+    height: 175px;
+    gap: 11px;
+  }
+  :where(.gym-site) .voice-card img {
+    height: 150px;
+  }
+  :where(.gym-site) .voice-card h3 {
+    font-size: 13px;
+  }
+  :where(.gym-site) .voice-card p {
+    font-size: 10px;
+  }
+  :where(.gym-site) .faq-section {
+    padding-bottom: 44px;
+  }
+  :where(.gym-site) .blog-section {
+    padding: 44px 0;
+    border-radius: 24px 24px 0 0;
+  }
+  :where(.gym-site) .faq-layout,
+  :where(.gym-site) .blog-layout {
+    gap: 22px;
+  }
+  :where(.gym-site) .faq-list {
+    padding-top: 0;
+  }
+  :where(.gym-site) .faq-list details {
+    font-size: 12px;
+  }
+  :where(.gym-site) .faq-list summary {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  :where(.gym-site) .blog-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  :where(.gym-site) .blog-card {
+    grid-template-columns: 120px 1fr 17px;
+  }
+  :where(.gym-site) .blog-card img {
+    width: 120px;
+  }
+  :where(.gym-site) .blog-card strong {
+    font-size: 12px;
+  }
+  :where(.gym-site) .blog-more {
+    justify-self: center;
+  }
+  :where(.gym-site) .contact-banner {
+    height: 315px;
+  }
+  :where(.gym-site) .contact-art-left,
+  :where(.gym-site) .contact-art-right {
+    width: 55%;
+  }
+  :where(.gym-site) .contact-inner {
+    padding-inline: 20px;
+  }
+  :where(.gym-site) .contact-inner h2 {
+    font-size: 20px;
+  }
+  :where(.gym-site) .contact-btn {
+    width: 100%;
+    max-width: 380px;
+    font-size: 13px;
+  }
+  :where(.gym-site) .footer-inner {
+    flex-wrap: wrap;
+  }
+  :where(.gym-site) .footer p {
+    order: 3;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 385px) {
+  :where(.gym-site) .hero-benefit span {
+    font-size: 8px;
+  }
+  :where(.gym-site) .hero h1 {
+    font-size: 29px;
+  }
+  :where(.gym-site) .feature-highlight > img {
+    height: 200px;
+  }
+  :where(.gym-site) .course-card {
+    min-width: 88%;
+  }
+  :where(.gym-site) .trainer-tile img,
+  :where(.gym-site) .trainer-tile.active img {
+    height: 88px;
+  }
+  :where(.gym-site) .trainer-tile strong {
+    font-size: 10px;
+  }
+  :where(.gym-site) .voice-track {
+    grid-auto-columns: 94%;
+  }
+  :where(.gym-site) .blog-card {
+    grid-template-columns: 96px 1fr 14px;
+  }
+  :where(.gym-site) .blog-card img {
+    width: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.gym-site) {
+    scroll-behavior: auto;
+  }
+  :where(.gym-site) *,
+  :where(.gym-site) *:before,
+  :where(.gym-site) *:after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  :where(.gym-site) .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* === v2: trainer selection visibly enlarges the selected card === */
+
+:where(.gym-site) .trainer-tiles {
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 0.74fr) minmax(0, 0.74fr);
+  transition: grid-template-columns 0.38s cubic-bezier(0.2, 0.7, 0.2, 1);
+  align-items: stretch;
+}
+
+:where(.gym-site) .trainer-tiles[data-active="1"] {
+  grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.75fr) minmax(0, 0.74fr);
+}
+
+:where(.gym-site) .trainer-tiles[data-active="2"] {
+  grid-template-columns: minmax(0, 0.74fr) minmax(0, 0.74fr) minmax(0, 1.75fr);
+}
+
+:where(.gym-site) .trainer-tile {
+  height: 150px;
+  overflow: hidden;
+  justify-content: flex-start;
+  transition:
+    border-color 0.24s,
+    box-shadow 0.24s,
+    transform 0.24s;
+}
+
+:where(.gym-site) .trainer-tile.active {
+  box-shadow: 0 8px 27px rgba(0, 153, 177, 0.14);
+  background: linear-gradient(145deg, #fff 45%, #f5fdfe);
+}
+
+:where(.gym-site) .trainer-tile:not(.active) img {
+  height: 94px;
+  object-position: center 25%;
+}
+
+:where(.gym-site) .trainer-tile:not(.active) strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:where(.gym-site) .trainer-main-image img.is-switching {
+  opacity: 0.7;
+  transform: scale(1.015);
+}
+
+:where(.gym-site) .trainer-main-image img {
+  transition:
+    opacity 0.22s,
+    transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+:where(.gym-site) .trainer-tile.active strong {
+  font-size: 15px;
+}
+
+:where(.gym-site) .trainer-tile.active em {
+  display: block;
+}
+
+/* Testimonials are 2-per-view on PC, 1-per-view on phones. */
+
+:where(.gym-site) .voice-track {
+  overscroll-behavior-inline: contain;
+}
+
+:where(.gym-site) .voice-card img {
+  object-position: center 25%;
+}
+
+:where(.gym-site) .slider-dots button {
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+:where(.gym-site) .slider-dots button.active {
+  transform: scale(1.24);
+}
+
+:where(.gym-site) .sr-only {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 980px) {
+  :where(.gym-site) .trainer-tiles {
+    gap: 9px;
+  }
+  :where(.gym-site) .trainer-tile.active {
+    flex-direction: row;
+    align-items: center;
+    padding: 7px;
+  }
+  :where(.gym-site) .trainer-tile.active img {
+    width: 68px;
+    height: 130px;
+    object-fit: cover;
+  }
+  :where(.gym-site) .trainer-tile:not(.active) img {
+    height: 94px;
+  }
+}
+
+@media (max-width: 700px) {
+  :where(.gym-site) .trainer-tiles {
+    gap: 7px;
+  }
+  :where(.gym-site) .trainer-tile {
+    height: 156px;
+  }
+  :where(.gym-site) .trainer-tile.active {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 4px;
+  }
+  :where(.gym-site) .trainer-tile.active img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+  }
+  :where(.gym-site) .trainer-tile:not(.active) img {
+    height: 100px;
+  }
+  :where(.gym-site) .trainer-tile.active strong {
+    font-size: 12px;
+  }
+  :where(.gym-site) .trainer-tile:not(.active) small,
+  :where(.gym-site) .trainer-tile:not(.active) em {
+    display: none;
+  }
+  :where(.gym-site) .trainer-tile.active em {
+    display: none;
+  }
+  :where(.gym-site) .trainer-tile.active .tiny-arrow {
+    display: none;
+  }
+  :where(.gym-site) .trainer-tile:not(.active) strong {
+    font-size: 10px;
+  }
+}

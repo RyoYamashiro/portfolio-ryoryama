@@ -1,0 +1,350 @@
+{
+  "apiFields": [
+    {
+      "fieldId": "name",
+      "name": "ジム名",
+      "kind": "text",
+      "required": true,
+      "initialValue": "NAGI",
+      "description": "サイト上部と下部に表示するジム名です。80文字以内。"
+    },
+    {
+      "fieldId": "label",
+      "name": "ロゴ下の説明",
+      "kind": "text",
+      "required": false,
+      "initialValue": "PERSONAL GYM",
+      "description": "ジム名の下に表示する短い説明です。80文字以内。"
+    },
+    {
+      "fieldId": "title",
+      "name": "検索・共有用タイトル",
+      "kind": "text",
+      "required": true,
+      "initialValue": "NAGI｜自分の身体と、静かに向き合う。",
+      "description": "検索結果やブラウザのタブに使うタイトルです。200文字以内。"
+    },
+    {
+      "fieldId": "description",
+      "name": "検索・共有用の説明",
+      "kind": "textArea",
+      "required": true,
+      "initialValue": "忙しい日常から離れ、自分を大切にする時間を。NAGIパーソナルジムのデザインテンプレートです。",
+      "description": "検索結果や共有時に使う紹介文です。500文字以内。"
+    },
+    {
+      "fieldId": "bookingUrl",
+      "name": "予約ページURL（https）",
+      "kind": "text",
+      "required": false,
+      "initialValue": "",
+      "description": "予約ボタンの移動先です。https://から始まるURLを入力。空欄ならデモ案内を表示します。"
+    },
+    {
+      "fieldId": "heroTitle",
+      "name": "トップの見出し",
+      "kind": "textArea",
+      "required": true,
+      "initialValue": "自分の身体と、\n静かに向き合う。",
+      "description": "サイトを開いて最初に見える大きな見出しです。200文字以内。"
+    },
+    {
+      "fieldId": "heroBody",
+      "name": "トップの説明",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "鍛えることは、\nもっと心地よい選択になる。",
+      "description": "トップの説明として表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "conceptTitle",
+      "name": "コンセプト見出し",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "忙しい日常から離れ、\n自分を大切にする時間を。",
+      "description": "コンセプト見出しとして表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "conceptBody",
+      "name": "コンセプト本文",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "ただ鍛えるだけの場所ではありません。\n心と身体のバランスを整え、\nこれからの毎日を支えるためのパーソナルジムです。\nここで過ごす時間が、あなたらしい美しさと\n健やかさにつながっていくことを目指しています。",
+      "description": "コンセプト本文として表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "featureTitle",
+      "name": "特徴の見出し",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "続けたくなる、\nパーソナルトレーニング。",
+      "description": "特徴の見出しとして表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "featureBody",
+      "name": "特徴の本文",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "一人ひとりの目的や体調、ライフスタイルに合わせて、\n無理のない最適なプランをご提案します。\n正しいフォームと丁寧なサポートで、\n初心者の方でも安心して取り組めます。",
+      "description": "特徴の本文として表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "trainerTitle",
+      "name": "トレーナー見出し",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "あなたに寄り添う\nトレーナー。",
+      "description": "トレーナー見出しとして表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "trainerBody",
+      "name": "トレーナー本文",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "あなたの目標も、小さな不安も。\n一人ひとりに丁寧に向き合います。\n目標達成はもちろん、その先の毎日も心地よく。\n対話を重ねながら、一緒に進んでいきます。",
+      "description": "トレーナー本文として表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "trainerDetail",
+      "name": "トレーナー詳細",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "運動経験、日常の過ごし方、目指す姿。最初にお話を伺い、動きの確認から無理のないプログラムを考えます。",
+      "description": "トレーナー紹介ボタンを押した後に表示する詳しい紹介です。"
+    },
+    {
+      "fieldId": "studioTitle",
+      "name": "空間の見出し",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "上質で落ち着いた、\nプライベート空間。",
+      "description": "空間の見出しとして表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "studioBody",
+      "name": "空間の本文",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "自然素材を取り入れた、やわらかな光が差し込む空間。\nトレーニングに集中できるのはもちろん、\n訪れるたびに心が整う、特別な場所を目指しています。",
+      "description": "空間の本文として表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "address",
+      "name": "住所・アクセス",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "公開時に実店舗のアクセス情報を設定します。",
+      "description": "空間・アクセスの詳細画面に表示します。住所や最寄り駅を入力してください。"
+    },
+    {
+      "fieldId": "hours",
+      "name": "営業時間・設備",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "店舗の営業時間、持ち物、設備をご案内します。",
+      "description": "空間・アクセスの詳細画面に表示します。営業時間や設備を入力してください。"
+    },
+    {
+      "fieldId": "priceNote",
+      "name": "料金の注意事項",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "※ 料金・プラン内容はデモです。入会金や契約条件は公開前に実店舗に合わせて設定します。",
+      "description": "料金の注意事項として表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "contactTitle",
+      "name": "予約エリア見出し",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "まずは、こちらから。",
+      "description": "予約エリア見出しとして表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "contactBody",
+      "name": "予約エリア本文",
+      "kind": "textArea",
+      "required": false,
+      "initialValue": "あなたのペースで、はじめてみませんか。\n体験トレーニングで、雰囲気を感じてください。",
+      "description": "予約エリア本文として表示します。改行できます。4000文字以内。"
+    },
+    {
+      "fieldId": "heroImage",
+      "name": "トップの画像",
+      "kind": "media",
+      "required": false,
+      "description": "写真を選んでください。未設定の場合はテンプレートの写真を表示します。"
+    },
+    {
+      "fieldId": "heroAlt",
+      "name": "トップの画像説明",
+      "kind": "text",
+      "required": false,
+      "description": "写真に写っている内容を短く説明してください。300文字以内。"
+    },
+    {
+      "fieldId": "receptionImage",
+      "name": "受付の画像",
+      "kind": "media",
+      "required": false,
+      "description": "写真を選んでください。未設定の場合はテンプレートの写真を表示します。"
+    },
+    {
+      "fieldId": "receptionAlt",
+      "name": "受付の画像説明",
+      "kind": "text",
+      "required": false,
+      "description": "写真に写っている内容を短く説明してください。300文字以内。"
+    },
+    {
+      "fieldId": "equipmentImage",
+      "name": "設備の画像",
+      "kind": "media",
+      "required": false,
+      "description": "写真を選んでください。未設定の場合はテンプレートの写真を表示します。"
+    },
+    {
+      "fieldId": "equipmentAlt",
+      "name": "設備の画像説明",
+      "kind": "text",
+      "required": false,
+      "description": "写真に写っている内容を短く説明してください。300文字以内。"
+    },
+    {
+      "fieldId": "trainerImage",
+      "name": "トレーナーの画像",
+      "kind": "media",
+      "required": false,
+      "description": "写真を選んでください。未設定の場合はテンプレートの写真を表示します。"
+    },
+    {
+      "fieldId": "trainerAlt",
+      "name": "トレーナーの画像説明",
+      "kind": "text",
+      "required": false,
+      "description": "写真に写っている内容を短く説明してください。300文字以内。"
+    },
+    {
+      "fieldId": "studioImage",
+      "name": "内観の画像",
+      "kind": "media",
+      "required": false,
+      "description": "写真を選んでください。未設定の場合はテンプレートの写真を表示します。"
+    },
+    {
+      "fieldId": "studioAlt",
+      "name": "内観の画像説明",
+      "kind": "text",
+      "required": false,
+      "description": "写真に写っている内容を短く説明してください。300文字以内。"
+    },
+    {
+      "fieldId": "plans",
+      "name": "料金プラン",
+      "kind": "repeater",
+      "required": true,
+      "customFieldIds": [
+        "plan"
+      ],
+      "repeaterCountLimitValidation": {
+        "repeatCount": {
+          "min": 1,
+          "max": 3
+        }
+      },
+      "description": "1〜3件追加してください。上から順にサイトに表示します。"
+    },
+    {
+      "fieldId": "faqs",
+      "name": "よくある質問",
+      "kind": "repeater",
+      "required": false,
+      "customFieldIds": [
+        "faq"
+      ],
+      "repeaterCountLimitValidation": {
+        "repeatCount": {
+          "max": 30
+        }
+      },
+      "description": "質問と回答を最大30件登録できます。上から順にサイトに表示します。"
+    }
+  ],
+  "customFields": [
+    {
+      "fieldId": "plan",
+      "name": "料金プラン",
+      "fields": [
+        {
+          "fieldId": "name",
+          "name": "プラン名",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "fieldId": "label",
+          "name": "説明",
+          "kind": "text",
+          "required": false
+        },
+        {
+          "fieldId": "price",
+          "name": "月額（税込・円）",
+          "kind": "number",
+          "required": true,
+          "description": "月額の税込金額を半角数字だけで入力します。例：33000。0〜10000000の整数。"
+        },
+        {
+          "fieldId": "items",
+          "name": "内容（1行に1項目）",
+          "kind": "textArea",
+          "required": true,
+          "description": "サービス内容を1行に1つ、1〜10項目入力します。全体で2000文字以内。"
+        },
+        {
+          "fieldId": "featured",
+          "name": "おすすめ表示",
+          "kind": "boolean",
+          "required": false,
+          "initialValue": false,
+          "description": "オンにすると、このプランにおすすめの表示を付けます。"
+        }
+      ],
+      "fieldOrderByColumn": [
+        [
+          "name",
+          "label",
+          "price",
+          "items",
+          "featured"
+        ]
+      ]
+    },
+    {
+      "fieldId": "faq",
+      "name": "質問と回答",
+      "fields": [
+        {
+          "fieldId": "question",
+          "name": "質問",
+          "kind": "text",
+          "required": true,
+          "description": "お客様からよく聞かれる質問を300文字以内で入力してください。"
+        },
+        {
+          "fieldId": "answer",
+          "name": "回答",
+          "kind": "textArea",
+          "required": true,
+          "description": "質問への回答を4000文字以内で入力してください。改行できます。"
+        }
+      ],
+      "fieldOrderByColumn": [
+        [
+          "question",
+          "answer"
+        ]
+      ]
+    }
+  ]
+}

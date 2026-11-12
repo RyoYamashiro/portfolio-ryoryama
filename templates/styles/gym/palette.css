@@ -1,0 +1,95 @@
+/* デモ用の固定パレット。サイト側のボタンやカードとは独立した見た目。 */
+:where(.gym-site) .theme-palette {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 60;
+  width: 252px;
+  max-width: calc(100vw - 32px);
+  padding: 14px 16px;
+  border: 1px solid #e1e7eb;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 36px #15253320;
+  color: #24313e;
+  backdrop-filter: blur(12px);
+}
+:where(.gym-site) .theme-palette-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0;
+  min-height: 28px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+}
+:where(.gym-site) .theme-palette-mark {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--theme-swatch);
+}
+:where(.gym-site) .theme-palette-chevron {
+  margin-left: auto;
+  font-size: 18px;
+  color: #64717c;
+}
+:where(.gym-site) .theme-palette-colors {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 12px 0;
+}
+:where(.gym-site) .theme-palette-swatch {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  flex-shrink: 0;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: var(--swatch);
+  box-shadow: 0 0 0 1px #dfe5e9;
+}
+:where(.gym-site) .theme-palette-swatch[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px #24313e;
+}
+:where(.gym-site) .theme-palette-swatch span {
+  color: #17202a;
+  font-size: 16px;
+  font-weight: 800;
+  text-shadow: 0 0 3px white;
+}
+:where(.gym-site) .theme-palette-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #61707c;
+}
+:where(.gym-site) .theme-palette-footer button {
+  padding: 4px 0 4px 8px;
+  border: 0;
+  background: transparent;
+  color: #344655;
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 700px) {
+  :where(.gym-site) .theme-palette {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}
+@media print {
+  :where(.gym-site) .theme-palette {
+    display: none;
+  }
+}

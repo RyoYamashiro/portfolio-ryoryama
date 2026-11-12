@@ -1,0 +1,34 @@
+/* 読み込み順を維持してください。色・フォントは base.css、各部の見た目は sections.css。 */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap");
+@import "./base.css";
+@import "./sections.css";
+@import "./effects.css";
+@import "./responsive.css";
+@import "./palette.css";
+
+/* 教材の管理画面・記事画面へスタイルが漏れないようトップページだけに適用。 */
+body:has(.gym-site) {
+  margin: 0;
+}
+.gym-site {
+  box-sizing: border-box;
+}
+:where(.gym-site) .preserve-lines {
+  white-space: pre-line;
+}
+:where(.gym-site) button.blog-card {
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+:where(.gym-site) :focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(.gym-site) .reveal.reveal-pending {
+    opacity: 1;
+    transform: none;
+  }
+}

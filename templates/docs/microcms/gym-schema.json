@@ -1,0 +1,283 @@
+{
+  "apiFields": [
+    {
+      "fieldId": "name",
+      "name": "ジム名",
+      "kind": "text",
+      "required": true,
+      "description": "80文字以内。ヘッダー・本文・フッターに表示します。",
+      "initialValue": "STELLA GYM"
+    },
+    {
+      "fieldId": "subtitle",
+      "name": "ロゴ下の説明",
+      "kind": "text",
+      "required": false,
+      "description": "80文字以内。ジム名の下の短い説明です。",
+      "initialValue": "PERSONAL TRAINING"
+    },
+    {
+      "fieldId": "phone",
+      "name": "電話番号",
+      "kind": "text",
+      "required": false,
+      "description": "80文字以内。サイト上部に表示します。",
+      "initialValue": "03-6459-1234"
+    },
+    {
+      "fieldId": "hours",
+      "name": "受付時間",
+      "kind": "text",
+      "required": false,
+      "description": "200文字以内。電話番号の下に表示します。",
+      "initialValue": "受付時間 9:00-21:00"
+    },
+    {
+      "fieldId": "title",
+      "name": "検索・共有用タイトル",
+      "kind": "text",
+      "required": true,
+      "description": "200文字以内。検索結果やブラウザのタブに使用します。",
+      "initialValue": "STELLA GYM | 理想のカラダで、もっと好きな自分に。"
+    },
+    {
+      "fieldId": "description",
+      "name": "検索・共有用の説明",
+      "kind": "textArea",
+      "required": true,
+      "description": "500文字以内。ジムの紹介文です。",
+      "initialValue": "STELLA GYMは、一人ひとりに寄り添う完全オーダーメイドのパーソナルジム。トレーニング・食事サポート・初めての方への丁寧な指導をご紹介します。"
+    },
+    {
+      "fieldId": "heroTitle",
+      "name": "トップの見出し",
+      "kind": "textArea",
+      "required": true,
+      "description": "200文字以内。サイトの最初に表示します。改行できます。",
+      "initialValue": "理想のカラダで、\nもっと好きな自分に。"
+    },
+    {
+      "fieldId": "heroBody",
+      "name": "トップの説明",
+      "kind": "textArea",
+      "required": false,
+      "description": "4000文字以内。ジム名に続けて表示します。改行できます。",
+      "initialValue": "一人ひとりに寄り添う\n完全オーダーメイドのパーソナルジムです。"
+    },
+    {
+      "fieldId": "contactTitle",
+      "name": "予約エリアの見出し",
+      "kind": "textArea",
+      "required": true,
+      "description": "200文字以内。サイト下部の予約案内です。",
+      "initialValue": "まずは無料カウンセリングで、\nあなたの理想を一緒に考えませんか？"
+    },
+    {
+      "fieldId": "bookingUrl",
+      "name": "予約ページURL",
+      "kind": "text",
+      "required": false,
+      "description": "https://から始まる予約先。空欄ならデモ案内を表示します。",
+      "initialValue": ""
+    },
+    {
+      "fieldId": "heroImage",
+      "name": "トップの写真",
+      "kind": "media",
+      "required": false,
+      "description": "未設定ならデモ写真を表示します。実店舗の写真に差し替えてください。"
+    },
+    {
+      "fieldId": "heroAlt",
+      "name": "トップの写真の説明",
+      "kind": "text",
+      "required": false,
+      "description": "写っている内容を300文字以内で入力します。",
+      "initialValue": "トレーニング風景"
+    },
+    {
+      "fieldId": "courses",
+      "name": "料金プラン",
+      "kind": "repeater",
+      "required": true,
+      "description": "1〜3件。上から順に表示します。",
+      "customFieldIds": [
+        "courses"
+      ],
+      "repeaterCountLimitValidation": {
+        "repeatCount": {
+          "min": 1,
+          "max": 3
+        }
+      }
+    },
+    {
+      "fieldId": "trainers",
+      "name": "トレーナー",
+      "kind": "repeater",
+      "required": true,
+      "description": "1〜3件。上から順に表示します。",
+      "customFieldIds": [
+        "trainers"
+      ],
+      "repeaterCountLimitValidation": {
+        "repeatCount": {
+          "min": 1,
+          "max": 3
+        }
+      }
+    },
+    {
+      "fieldId": "faqs",
+      "name": "よくある質問",
+      "kind": "repeater",
+      "required": false,
+      "description": "0〜30件。上から順に表示します。",
+      "customFieldIds": [
+        "faqs"
+      ],
+      "repeaterCountLimitValidation": {
+        "repeatCount": {
+          "min": 0,
+          "max": 30
+        }
+      }
+    }
+  ],
+  "customFields": [
+    {
+      "fieldId": "courses",
+      "name": "料金プラン",
+      "fields": [
+        {
+          "fieldId": "title",
+          "name": "プラン名",
+          "kind": "text",
+          "required": true,
+          "description": "80文字以内。"
+        },
+        {
+          "fieldId": "description",
+          "name": "プランの説明",
+          "kind": "textArea",
+          "required": false,
+          "description": "2000文字以内。"
+        },
+        {
+          "fieldId": "price",
+          "name": "月額料金（円〜）",
+          "kind": "number",
+          "required": true,
+          "description": "税込・税別などの料金条件はプランの説明に記入してください。数字だけで0〜10000000の整数を入力します。"
+        },
+        {
+          "fieldId": "tags",
+          "name": "特徴のタグ",
+          "kind": "textArea",
+          "required": false,
+          "description": "1行1項目、5項目以内、合計500文字以内。例：初心者向け。"
+        },
+        {
+          "fieldId": "image",
+          "name": "プランの写真",
+          "kind": "media",
+          "required": false,
+          "description": "未設定ならデモ写真を表示します。"
+        },
+        {
+          "fieldId": "alt",
+          "name": "写真の説明",
+          "kind": "text",
+          "required": false,
+          "description": "300文字以内。"
+        }
+      ],
+      "fieldOrderByColumn": [
+        [
+          "title",
+          "description",
+          "price",
+          "tags",
+          "image",
+          "alt"
+        ]
+      ]
+    },
+    {
+      "fieldId": "trainers",
+      "name": "トレーナー",
+      "fields": [
+        {
+          "fieldId": "name",
+          "name": "名前",
+          "kind": "text",
+          "required": true,
+          "description": "80文字以内。実際の担当者の名前を入力してください。"
+        },
+        {
+          "fieldId": "englishName",
+          "name": "名前の英字表記",
+          "kind": "text",
+          "required": false,
+          "description": "100文字以内。"
+        },
+        {
+          "fieldId": "qualification",
+          "name": "資格・専門分野",
+          "kind": "textArea",
+          "required": false,
+          "description": "500文字以内。確認できる実際の情報のみ入力します。"
+        },
+        {
+          "fieldId": "description",
+          "name": "紹介文",
+          "kind": "textArea",
+          "required": false,
+          "description": "4000文字以内。"
+        },
+        {
+          "fieldId": "image",
+          "name": "プロフィール写真",
+          "kind": "media",
+          "required": false,
+          "description": "未設定ならデモ人物の写真を表示します。公開前に本人の写真へ変更してください。"
+        }
+      ],
+      "fieldOrderByColumn": [
+        [
+          "name",
+          "englishName",
+          "qualification",
+          "description",
+          "image"
+        ]
+      ]
+    },
+    {
+      "fieldId": "faqs",
+      "name": "よくある質問",
+      "fields": [
+        {
+          "fieldId": "question",
+          "name": "質問",
+          "kind": "text",
+          "required": true,
+          "description": "300文字以内。"
+        },
+        {
+          "fieldId": "answer",
+          "name": "回答",
+          "kind": "textArea",
+          "required": true,
+          "description": "4000文字以内。改行できます。"
+        }
+      ],
+      "fieldOrderByColumn": [
+        [
+          "question",
+          "answer"
+        ]
+      ]
+    }
+  ]
+}

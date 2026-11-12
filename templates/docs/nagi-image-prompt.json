@@ -1,0 +1,6 @@
+{
+  "tool": "image_gen",
+  "reference": "ユーザー提供 NAGI パーソナルジムの美しい一日.png",
+  "output": "public/images/gym-premium/hero.webp",
+  "prompt": "Create ONE ultra photorealistic wide landscape hero photograph, aspect ratio 2.2:1, for the NAGI personal gym website shown in the attached reference. Recreate the photographic art direction of the TOP HERO ONLY, not the webpage: beautiful quiet Japanese boutique personal training studio, warm limestone plaster walls, floor-to-ceiling black steel windows, leafy plants, dark wood floor with long golden sunlight shadows, tasteful black dumbbell rack on far right. On RIGHT HALF, an adult Japanese woman in black athletic wear performs a controlled split squat while an adult Japanese male personal trainer wearing black kneels nearby giving attentive coaching. Natural anatomy, calm real professional gym atmosphere, cinematic editorial architectural photography, soft warm morning sunlight. LEFT 45 percent mostly unoccupied softly lit room and windows, light neutral low-detail area for dark Japanese heading overlay later. Subjects on right, whole bodies in frame. Match rich organic warm tones of reference. NO text, NO letters, NO logos, NO webpage, NO collage, NO borders. Only single photographic scene."
+}
