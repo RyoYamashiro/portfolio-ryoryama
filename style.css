@@ -4,6 +4,27 @@
 
 html { scroll-behavior: smooth; }
 
+.buddyb-desktop { display: flex; flex-direction: column; }
+.buddyb-desktop > :first-child { flex-shrink: 0; }
+.buddyb-screen { position: relative; overflow: hidden; background: #fff; }
+.buddyb-screen-desktop { flex: 1; min-height: 0; }
+.buddyb-screen-mobile { height: 100%; }
+.buddyb-capture { display: block; width: 100%; height: auto; max-width: none; animation: buddyb-scroll 100s linear infinite; animation-play-state: paused; }
+.buddyb-screen-mobile .buddyb-capture { animation-duration: 130s; }
+.buddyb-screen.is-visible .buddyb-capture { animation-play-state: running; }
+.buddyb-screen:hover .buddyb-capture,
+.buddyb-screen.is-paused .buddyb-capture { animation-play-state: paused; }
+.buddyb-preview-control:focus-visible { outline: 2px solid #334155; outline-offset: 5px; }
+@keyframes buddyb-scroll {
+  0%, 5% { transform: translateY(0); }
+  45%, 55% { transform: translateY(calc(-100% + var(--preview-height, 240px))); }
+  95%, 100% { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .buddyb-capture { animation: none; }
+  .buddyb-preview-control { display: none; }
+}
+
 .mono { font-family: 'Courier New', monospace; }
 
 /* ── アニメーション ── */

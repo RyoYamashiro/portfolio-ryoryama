@@ -52,3 +52,26 @@ if (reveals.length) {
     reveals.forEach(el => el.classList.add('visible'));
   }
 }
+
+// Animate real BUDDYB captures only while their device frames are visible.
+const buddybScreens = document.querySelectorAll('.buddyb-screen');
+const buddybResize = new ResizeObserver(entries => {
+  entries.forEach(({ target, contentRect }) => {
+    target.style.setProperty('--preview-height', `${contentRect.height}px`);
+  });
+});
+const buddybVisibility = new IntersectionObserver(entries => {
+  entries.forEach(({ target, isIntersecting }) => target.classList.toggle('is-visible', isIntersecting));
+});
+buddybScreens.forEach(screen => {
+  buddybResize.observe(screen);
+  buddybVisibility.observe(screen);
+});
+document.querySelectorAll('.buddyb-preview-control').forEach(button => {
+  button.addEventListener('click', () => {
+    const paused = button.getAttribute('aria-pressed') !== 'true';
+    button.setAttribute('aria-pressed', String(paused));
+    button.textContent = paused ? button.dataset.resumeLabel : button.dataset.pauseLabel;
+    button.parentElement.querySelectorAll('.buddyb-screen').forEach(screen => screen.classList.toggle('is-paused', paused));
+  });
+});
